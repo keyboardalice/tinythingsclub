@@ -1,0 +1,183 @@
+/* colors:
+light grey - #d9d9d9
+dark blue - #0000cc
+red - #FF0000
+yellow - #FAFF06
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url(images/shaggy-green-rug.jpeg);
+    height: 1500px;
+    margin: 0;
+}
+
+header {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 30px;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navContainer {
+    margin-left: 50px;
+    width: 167px;
+    height: auto;
+    display: block;
+    background-color: #D9D9D9;
+    border: 1px solid black;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    background-color: #0000CC;
+    color: white;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.navigation li:hover {
+    background-color: #f0f0f0;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: auto;
+    height: 100%;
+    padding: 20px;
+}
+
+.patch1 {
+    display: block;
+    position: absolute;
+    left: 70%;
+    margin-right: 30px;
+    height: 470px;
+    width: 468px;
+}
+
+.backPattern {
+    z-index: 3;
+    background-image: url(images/plaid-background.png);
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#photoArray>div {
+    border: 1px solid #da0062;
+    background-color: #d9d9d9;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+}
+
+#photoArray {
+    z-index: 3;
+    display: grid;
+    justify-content: center;
+    align-content: space-evenly;
+    margin: 80px;
+    margin-top: 50px;
+    grid-gap: 1.5em;
+    grid-template-areas:
+        "photo photo photo photo"
+        "photoFive photoSix photoSeven photoEight";
+}
+
+.hand {
+    width: 550px;
+    height: auto;
+    margin: 10px;
+    position: fixed;
+    left: 70%;
+    z-index: 4;
+}
+
+.hand img {
+    object-fit: contain;
+}
+
+.bar {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #0000cc;
+    color: #FAFF06;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.bar_content {
+    display: block;
+    width: 100%;
+    transform: translateX(100%);
+    animation: move 30s linear infinite;
+    animation-delay: -30s;
+}
+
+/* Create the animation */
+@keyframes move {
+    to {
+        transform: translateX(-100%);
+    }
+}
