@@ -65,9 +65,12 @@ header {
     width: 167px;
     max-height: 180px;
     margin-bottom: 10px;
-    display: block;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
     background-color: #D9D9D9;
     border: 1px solid black;
+    border-top: none;
 }
 
 .title {
@@ -136,14 +139,15 @@ header {
 
 .flex-home article {
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 200px;
+    margin-right: 10px;
 }
 
 .backPattern {
     z-index: 3;
     background-image: url(images/plaid-background.png);
     display: flex;
-    width: 60%;
+    width: 50%;
     height: auto;
     position: relative;
     margin-top: 40px;
@@ -156,7 +160,7 @@ header {
 
 #photoArray>div {
     border: 1px solid #da0062;
-    background-color: #d9d9d9;
+    background-color: #EAEAEA;
     text-align: center;
 }
 
@@ -165,7 +169,7 @@ header {
     display: grid;
     justify-content: center;
     align-content: space-evenly;
-    margin: 80px;
+    margin: 60px;
     margin-top: 50px;
     grid-gap: 1.5em;
     grid-template-columns:
@@ -185,21 +189,117 @@ header {
     object-fit: contain;
 }
 
-/* Create the animation */
 @keyframes move {
     to {
         transform: translateX(-100%);
     }
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (min-width: 721px) {
+    .logosmall {
+        display: none;
+    }
+} */
+
+/* small screen */
+@media only screen and (max-width: 720px) {
     .patch1 {
        display: none;
     }
     .flex-home {
         flex-direction: column-reverse;
     }
+        .navContainer {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 5;
+            height: 45px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            background-color: #D9D9D9;
+            border: 1px solid black;
+        }
+    
+        .navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+    
+        .navigation li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: lighter;
+            text-align: center;
+            border-right: 1px solid black;
+            border-top: none;
+        }
+    
+        .navigation a {
+            color: black;
+            padding: 5px;
+        }
+    
+        .navigation li:last-child {
+            border-right: none;
+        }
+    
+        .navigation li:hover {
+            background-color: #f0f0f0;
+        }
+    .flex-home article {
+        margin: 0;
+        top: 0;
+    }
+    .backPattern {
+        width: 85%;
+        margin-left: 38px;
+        background-image: none;
+    }
     #photoArray {
         grid-template-columns: 1fr 1fr;
+        margin: 20px;
     }
+    #photoArray>div {
+        border: 1.5px solid #da0062;
+    }
+    .title {
+        display: none;
+    }
+    #cid0020000360393934216 {
+        display: none;
+    }
+    .hand {
+        display: none;
+    }
+    .bar {
+        display: none;
+    }
+
+/* mid screen */
+@media only screen and (max-width: 768px)and (min-width: 721px)
+    {
+    .logo {
+        width: 80%;
+
+    }
+    .patch1 {
+            display: none;
+        }
+    .hand {
+            display: none;
+        }
+    .flex-home article {
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-right: 10px;
+    }
+}
+
 }
