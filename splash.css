@@ -1,0 +1,31 @@
+/* colors:
+light grey - #d9d9d9
+dark blue - #0000cc
+red - #FF0000
+yellow - #FAFF06
+green - #A1C001
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url(images/greenrug-web.jpg);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
