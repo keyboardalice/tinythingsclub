@@ -233,6 +233,8 @@ body {
     flex-direction: row;
     position: relative;
     align-items: center;
+    text-align:center;
+    justify-content:center;
 }
 
 .arrowleft {
