@@ -1,0 +1,41 @@
+body {
+    font-family: 'Times New Roman', Times, serif
+}
+
+h1 {
+    font-size: 25px;
+    color: #0000cc;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin: 35px 0 20px 0 !important;
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #A1C001;
+    padding: 10px;
+}
+
+.formgroup {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-left: 200px;
+    font-style: italic;
+    background: #0000cc;
+    color: white;
+}
+.form-group {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+}
