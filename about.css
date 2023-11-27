@@ -83,14 +83,24 @@ p {
      display: flex;
      flex-direction: row;
      justify-content: space-evenly;
+     width:100%;
  }
 
  .navigation li {
+    flex:1;
      font-family: 'Times New Roman', Times, serif;
      font-size: 12px;
      padding: 12px;
      font-weight: bold;
      text-align: center;
+     border-right: 1.5px solid black;
+ }
+ .navigation li:last-child {
+    border-right:none;
+ }
+
+ .navigation li:hover {
+
  }
 
  .navigation a {
@@ -107,4 +117,12 @@ p {
     height: 700px;
     max-width: 50ch;
     justify-content: center;
+    opacity: 100%;
+}
+
+.background-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: rgb(255, 255, 255, .5);
 }
