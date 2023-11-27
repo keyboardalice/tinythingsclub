@@ -24,29 +24,82 @@ body {
     position: fixed;
 }
 
-h1 {
-    font-size: 25px;
-    color: #0000cc;
-    background: #A1C001;
-    padding: 5px;
-    font-weight: bold;
-    font-style: italic;
+header {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin: 35px 0 20px 0 !important;
+}
+
+.navContainer {
+    width: 40%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    border: 1.5px solid black;
+}
+
+.navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navigation li {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navigation a {
+    margin: 30px;
+    text-decoration: none;
+    color: black
+}
+
+.submit-here {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    width: 500px;
-    height: 400px;
+    background-image: url(images/plaid-background-submit.png);
+    width: 700px;
+    height: 480px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
 }
 
 button {
     width: 100px;
     height: 30px;
-    margin-left: 200px;
+    margin-left: 290px;
     font-style: italic;
     background: #0000cc;
     color: white;
@@ -56,4 +109,8 @@ button {
     margin-left: auto;
     margin-right: auto;
     padding: 2px;
+}
+
+.submission-gallery {
+    margin: 100px;
 }
