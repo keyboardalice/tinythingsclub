@@ -34,6 +34,25 @@ header {
     text-align: center;
 }
 
+
+
+.submit-here {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .navContainer {
     width: 40%;
     position: fixed;
@@ -55,37 +74,29 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .navigation li {
+    flex: 1;
     font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     padding: 12px;
     font-weight: bold;
     text-align: center;
+    border-right: 1.5px solid black;
 }
+
+.navigation li:last-child {
+    border-right: none;
+}
+
+.navigation li:hover {}
 
 .navigation a {
     margin: 30px;
     text-decoration: none;
     color: black
-}
-
-.submit-here {
-    width: 100%;
-    height: auto;
-    display: flex;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
