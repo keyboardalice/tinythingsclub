@@ -12,7 +12,7 @@
     <link rel="icon" href="logos/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body onload="move('element')">
     <header>
      <div class="header">
       <div class="logo">
@@ -25,7 +25,7 @@
 
 <div class="bar">
     <span class="bar_content">
-       Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome!
+       Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome! Welcome!
     </span>
 </div>
 
@@ -41,12 +41,74 @@
             <li id="homebutton"><a href=>HOME</a></li>
             <!-- <li><a href="#gallery">GALLERY</a></li> -->
             <li><a href="http://127.0.0.1:5500/about.html">ABOUT</a></li>
-            <li><a href="https://tinythingsclub.123guestbook.com/">SUBMIT</a></li>
+            <li><a href="http://127.0.0.1:5500/submit.html">SUBMIT</a></li>
         </ul>
         </div>
-</div>
-<script id="cid0020000360393934216" data-cfasync="false" async src="http://st.chatango.com/js/gz/emb.js"
+    </div>
+    <script id="cid0020000360393934216" data-cfasync="false" async src="http://st.chatango.com/js/gz/emb.js"
     style="width: 170px;height: 208px;">{ "handle": "tinythingsclub", "arch": "js", "styles": { "a": "D9D9D9", "b": 100, "c": "0000cc", "d": "ff0000", "g": "0000cc", "h": "a9a9a9", "j": "ffffff", "k": "D9D9D9", "l": "0000cc", "m": "D9D9D9", "p": "10.35", "q": "d9d9d9", "r": 100, "usricon": 0, "sbc": "a9a9a9", "surl": 0, "allowpm": 0, "fwtickm": 1 } }</script>
+
+    <script>
+        var chooseElement;
+
+        const move = function(element){
+            const elements = document.querySelectorAll(".element")
+            elements.forEach(element => {
+                element.addEventListener("mousedown", () => {
+                    element.style.position = "absolute"
+                    chooseElement = element
+
+                    document.onmousemove = (e) => {
+                        var x = e.pageX
+                        var y = e.pageY
+                    
+                        chooseElement.style.left = x -80 + "px"
+                        chooseElement.style.top = y -220 + "px"
+                    }
+                })
+            })
+            document.onmouseup = function(e){
+                chooseElement = null
+                document.removeEventListener("mousemove", setCoordinates)
+            }
+        }
+
+    </script>
+
+    <!-- <script>
+        lightbox.option({
+            'showImageNumberLabel': false
+            'wrapAround' : true
+            'resizeDuration' : 0
+            'positionFromTop' : 100
+        })
+    </script> -->
+
+    <div class="sticker-container">
+        <div class="sticker-box">
+                <div class="sticker-title">
+                    TAKE A STICKER!!
+                </div>
+                <div class="element" id="sticker1">
+                    <img src="stickers/bear-presents.png" alt="bearsticker" title="take me home" srcset="">
+                </div>
+                <div class="element" id="sticker2">
+                    <img src="stickers/puppy.png" alt="puppysticker" title="i love you" srcset="">
+                </div>
+                <div class="element" id="sticker3">
+                    <img src="stickers/keroppis.png" title="hi!!" alt="unicornsticker" srcset="">
+                </div>
+                <div class="element" id="sticker4">
+                    <img src="stickers/unicorn.png" alt="unicornsticker" title="weeeee" srcset="">
+                </div>
+                <div class="element" id="sticker5">
+                    <img src="stickers/bear.png" alt="bearsticker2" title="im sweet" srcset="">
+                </div>
+                <div class="element" id="sticker6">
+                    <img src="stickers/tails.png" alt="tailssticker" title="take me with u" srcset="">
+                </div>
+        </div>
+    </div>
 </article>
 
 <div class="backPattern">
@@ -56,7 +118,7 @@
         class="things-image-link" 
         href="things/15.gif"
         data-lightbox="things-set" 
-        data-title="Click the right half of the image to move forward.">
+        data-title="01 - Plastic Owl">
         <img src="things/15.gif">
         </a>
     </div>
@@ -65,7 +127,7 @@
         class="things-image-link" 
         href="things/14.gif" 
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="02 - Clay Bunny">
         <img src="things/14.gif">
         </a>
     </div>
@@ -73,7 +135,7 @@
         <a class="things-image-link" 
         href="things/12.gif" 
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="03 - Pope on a Horse">
         <img src="things/12.gif">
         </a>
     </div>
@@ -81,7 +143,7 @@
         <a class="things-image-link" 
         href="things/13.gif" 
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="04 - White Wine Bottle">
         <img src="things/13.gif">
         </a>
     </div>
@@ -89,7 +151,7 @@
         <a class="things-image-link" 
         href="things/16.gif" 
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="05 - Plastic Cow">
         <img src="things/16.gif">
         </a>
     </div>
@@ -97,7 +159,7 @@
         <a class="things-image-link"
         href="things/18.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="06 - Gumball Machine">
         <img src="things/18.gif">
         </a>
     </div>
@@ -105,7 +167,7 @@
         <a class="things-image-link"
         href="things/01.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="07 - Chestnut Carved Mushroom">
         <img src="things/01.gif">
         </a>
     </div>
@@ -113,7 +175,7 @@
         <a class="things-image-link"
         href="things/02.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="08 - Painted Ceramic Frog">
         <img src="things/02.gif">
         </a>
     </div>
@@ -121,31 +183,31 @@
         <a class="things-image-link"
         href="things/03.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="09 - Flat Monkey Eraser">
         <img src="things/03.gif">
-        </a>
-    </div>
-    <div>
-        <a class="things-image-link"
-        href="things/04.gif"
-        data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
-        <img src="things/04.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link"
         href="things/05.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="10 - Salt & Pepper Shaker">
         <img src="things/05.gif">
+        </a>
+    </div>
+    <div>
+        <a class="things-image-link"
+        href="things/04.gif"
+        data-lightbox="things-set"
+        data-title="11 - Monkey Eraser">
+        <img src="things/04.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link"
         href="things/06.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="12 - Glazed Ceramic Cat">
         <img src="things/06.gif">
         </a>
     </div>
@@ -153,7 +215,7 @@
         <a class="things-image-link"
         href="things/07.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="13 - Doll Hand">
         <img src="things/07.gif">
         </a>
     </div>
@@ -161,7 +223,7 @@
         <a class="things-image-link"
         href="things/08.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="14 - Diglet">
         <img src="things/08.gif">
         </a>
     </div>
@@ -169,7 +231,7 @@
         <a class="things-image-link"
         href="things/09.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="15 - Tinfoil Keychain">
         <img src="things/09.gif">
         </a>
     </div>
@@ -177,7 +239,7 @@
         <a class="things-image-link"
         href="things/10.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="16 - Lucky Cat Keychain">
         <img src="things/10.gif">
         </a>
     </div>
@@ -185,7 +247,7 @@
         <a class="things-image-link"
         href="things/11.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="17 - Glazed Ceramic Frog">
         <img src="things/11.gif">
         </a>
     </div>
@@ -193,45 +255,45 @@
         <a class="things-image-link"
         href="things/19.gif"
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="18 - Rubber Lucky Cat">
         <img src="things/19.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link" 
-        href="things/16.gif" 
+        href="things/26.gif" 
         data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
-        <img src="things/16.gif">
+        data-title="19 - Gothitelle">
+        <img src="things/26.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link" href="things/20.gif" data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="20 - Toilet">
         <img src="things/20.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link" href="things/21.gif" data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="21 - Bone Dice">
         <img src="things/21.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link" href="things/22.gif" data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="22 - Cheese Wheel">
         <img src="things/22.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link" href="things/23.gif" data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="23 - Metal Frog">
         <img src="things/23.gif">
         </a>
     </div>
     <div>
         <a class="things-image-link" href="things/24.gif" data-lightbox="things-set"
-        data-title="Click the right half of the image to move forward.">
+        data-title="Wooden Bunny">
         <img src="things/24.gif">
         </a>
     </div>
