@@ -241,7 +241,7 @@ body {
 
 .backPattern {
     z-index: 3;
-    background-image: url(images/plaid-background.png);
+    background-image: url(images/plaid-background-new.png);
     display: flex;
     width: 50%;
     height: auto;
