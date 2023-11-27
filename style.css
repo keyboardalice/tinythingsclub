@@ -29,7 +29,7 @@ body {
     /* font-family: "times new roman pixelated"; */
     background-image: url(images/shaggy-green-rug.jpeg);
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     margin: 0;
 }
 
@@ -95,6 +95,7 @@ body {
     padding: 10px;
     text-align: center;
     border-top: 1.5px solid black;
+    /* transition: all .2s ease-in-out; */
 }
 
 .navigation a {
@@ -106,8 +107,8 @@ body {
 .navigation li:hover {
     transform: scale(1.01);
     transform-origin: 540% -1960%;
-    border: 1.5px solid black;
     box-shadow: 8px -7px black;
+    border: 1.5px solid black;
 }
 
 .navigation li:nth-child(1) {
@@ -177,8 +178,65 @@ body {
 
 .flex-home article {
     margin-top: 50px;
-    margin-left: 200px;
-    margin-right: 10px;
+    margin-left: 180px;
+    margin-right: 40px;
+}
+
+.sticker-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sticker-title {
+    width: 150px;
+    height: 35px;
+    background: #FAFF06;
+    border: solid 1.5px black;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sticker {
+    z-index: 100000;
+}
+
+#sticker1 {
+    position: absolute;
+    top: 500px;
+    left: 100px;
+}
+
+#sticker2 {
+    position: absolute;
+    top: 480px;
+    left: 250px;
+}
+
+#sticker3 {
+    position: absolute;
+    top: 630px;
+    left: 230px;
+}
+
+#sticker4 {
+    position: absolute;
+    top: 680px;
+    left: 150px;
+}
+
+#sticker5 {
+    position: absolute;
+    top: 750px;
+    left: 250px;
+}
+
+#sticker6 {
+   position: absolute;
+    top: 820px;
+    left: 150px;
 }
 
 .backPattern {
@@ -200,7 +258,14 @@ body {
     border: 1.5px solid #da0062;
     background-color: #EAEAEA;
     text-align: center;
+    transition: all .2s ease-in-out;
 }
+
+#photoArray>div:hover {
+    transform: scale(1.1);
+}
+
+
 
 /* #photoArray:hover {
     transform: scale(1.2);
@@ -333,7 +398,12 @@ body {
     #photoArray>div {
         border: 3px solid #da0062;
     }
-    .logo, .title, .hand, .bar {
+
+    /* #photoArray>div {
+        transform: none;
+    } */
+
+    .logo, .title, .hand, .bar, .sticker-container {
         display: none;
     }
     /* #cid0020000360393934216 {
