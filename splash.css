@@ -32,9 +32,17 @@ body {
 }
 
 .header {
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 100px;
     margin-right: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.disclaimer {
+    font-size: 15px;
+    color: #FAFF06;
+    text-shadow: 1px 1px #0000cc;
     display: flex;
     justify-content: center;
 }
