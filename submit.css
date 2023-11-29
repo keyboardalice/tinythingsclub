@@ -20,7 +20,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-image: url(images/shaggy-green-rug.jpeg);
     width: 100%;
-    height: 100%;
+    height: 1500;
     margin: 0;
     position: fixed;
 }
@@ -155,6 +155,73 @@ input.form-control {
     padding: 1px;
 }
 
-.submission-gallery {
-    margin: 100px;
+.titleandborder {
+    display: inline-flex;
+    width: 100%;
+}
+
+.right-stars, .left-stars {
+    width: 38%;
+    margin: auto;
+    margin-top: 96px;
+}
+
+h1 {
+    margin: auto;
+    padding-top: 8px;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.title {
+    width: 220px;
+    height: 45px;
+    background: #FAFF06;
+    font-weight: 400;
+    border: solid 1.5px black;
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.backPattern {
+    z-index: 3;
+    display: flex;
+    width: 70%;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#photoArray>div {
+    border: 1.5px solid #da0062;
+    background-color: #EAEAEA;
+    vertical-align: middle;
+    font-size: 0px;
+}
+
+#photoArray {
+    z-index: 3;
+    display: grid;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-top: 20px;
+    grid-gap: 3em;
+    grid-template-columns:
+        1fr 1fr 1fr;
+}
+
+
+footer {
+    height: 200px;
 }
