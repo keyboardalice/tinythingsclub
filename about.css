@@ -99,9 +99,9 @@ p {
     border-right:none;
  }
 
- .navigation li:hover {
-
- }
+.navigation li:nth-child(2) {
+    background-color: #FAFF06;
+}
 
  .navigation a {
     margin: 30px;
