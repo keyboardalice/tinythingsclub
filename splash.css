@@ -45,6 +45,7 @@ body {
     text-shadow: 1px 1px #0000cc;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .image-container {
