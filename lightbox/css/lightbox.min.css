@@ -23,7 +23,7 @@ body.lb-disable-scrolling{
     z-index:9999;
     background-color: #A1C001;
     filter:alpha(Opacity=80);
-    opacity:10;
+    opacity:90%;
     display:none
 }
 
