@@ -92,8 +92,6 @@ form {
     border-right: none;
 }
 
-.navigation li:hover {}
-
 .navigation a {
     margin: 30px;
     text-decoration: none;
@@ -205,10 +203,53 @@ h1 {
 }
 
 #photoArray>div {
-    border: 1.5px solid #da0062;
+    position: relative;
+    border: 1.5px solid #FF0000;
     background-color: #EAEAEA;
     vertical-align: middle;
     font-size: 0px;
+}
+
+#photoArray>div:hover {
+   outline: 2px solid #FF0000;
+    transition: 0.2s; 
+
+}
+
+.photo-text {
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: #FAFF06;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    /* Text color when visible */
+    opacity: 0;
+    /* Initial opacity, invisible */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for opacity */
+}
+
+.photo-text>h3 {
+    font-size: 16pt;
+    padding-top: 20px;
+}
+
+.photo-text>i {
+    font-size: 14pt;
+}
+    
+/* Show the text when hovering over the container */
+#photoArray>div:hover .photo-text {
+    opacity: 1;
 }
 
 #photoArray {
@@ -217,11 +258,21 @@ h1 {
     justify-content: center;
     align-content: space-evenly;
     margin-top: 20px;
-    grid-gap: 3em;
+    grid-gap: 4em;
     grid-template-columns:
         1fr 1fr 1fr;
 }
 
+#photoArray>div>img:hover {
+    opacity: 0.0;
+    transition: 0.2s;
+}
+
+#photoArray>div>img {
+    opacity: 1.0;
+    transition: 0.2s;
+    object-fit: cover;
+}
 
 footer {
     height: 200px;
